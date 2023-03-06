@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <!-- Google font CDN -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- Analog Clock -->
+    <section class="h-screen bg-slate-800 flex flex-col items-center justify-center gap-10">
+        <h2 class="text-5xl text-red-50 font-bold text-center">The beauty of your wall!</h2>
+        <div class="analog-clock relative h-56 w-56 rounded-full shadow-inner shadow-slate-200 bg-slate-800">
+            <!-- inner nut -->
+            <div class="absolute z-50 top-2/4 left-2/4 bg-slate-800 shadow-inner shadow-slate-200 h-4 w-4 -translate-x-2/4 -translate-y-2/4  rounded-lg"></div>
+            <!-- second, minute and hour  -->
+            <div class="hour origin-bottom z-30 absolute top-9 left-2/4  bg-orange-500 w-1 h-2/6"></div>
+            <div class="minute origin-bottom z-40 absolute top-0 left-2/4 -translate-x-2/4 bg-green-400 w-0.5 h-3/6"></div>
+            <div class="second origin-bottom z-40 absolute top-0 left-2/4 -translate-x-2/4 bg-red-500 w-px h-3/6"></div>
+        </div>
+        <!-- tick mark -->
+        <div class="tick-parent absolute top-2/4 left-2/4 translate-y-10"></div>
+    </section>
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
